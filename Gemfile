@@ -17,9 +17,7 @@ group :development, :test do
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions  
   gem 'database_cleaner' # to clear Cucumber's test database between runs
 end
-group :development do
-  gem 'cucumber-rails'
-end
+
 
 group :production do
   gem 'pg'
@@ -45,6 +43,6 @@ gem 'haml'
 # gem 'capistrano'
 
 
-group :test do
+group :test,:development do
   gem 'cucumber-rails', :require => false
 end
