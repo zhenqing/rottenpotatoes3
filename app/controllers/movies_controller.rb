@@ -64,4 +64,9 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+
+  def same_director
+    @movies = Movie.find(params[:director])
+  end
+
 end

@@ -45,6 +45,10 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^(?:|I )am on (.+) of movie (\d+)$/ do |page_name,mid|
+  visit "/movies/"+mid+path_to(page_name)
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
