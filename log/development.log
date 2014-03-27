@@ -93,3 +93,15 @@ Connecting to database specified by database.yml
   [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (147.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (29.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (18.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20111119180638)
+Migrating to AddDirectorToMovies (20140327022259)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.0ms)[0m  ALTER TABLE "movies" ADD "director" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140327022259')[0m
+  [1m[35m (233.2ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
